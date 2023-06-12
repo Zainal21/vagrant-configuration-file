@@ -66,11 +66,11 @@ Vagrant.configure("2") do |config|
   config.vm.define "vm-node-2" do |service_two|
     service_two.vm.network :private_network, ip: "192.168.56.2"
   end
-  config.vm.define "vm-node-3" do |service_two|
+  config.vm.define "vm-node-3" do |service_three|
     service_two.vm.network :private_network, ip: "192.168.56.3"
   end
 
-  config.vm.define "vm-node-4" do |service_two|
+  config.vm.define "vm-node-4" do |service_four|
     service_two.vm.network :private_network, ip: "192.168.56.4"
   end
     # Enable provisioning with a shell script. Additional provisioners such as
