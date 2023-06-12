@@ -60,11 +60,14 @@ Vagrant.configure("2") do |config|
   end
   # View the documentation for the provider you are using for more
   # information on available options.
-  config.vm.define "first_vm" do |service_one|
+  config.vm.define "vm-node-1" do |service_one|
     service_one.vm.network :private_network, ip: "192.168.56.0"
   end
-  config.vm.define "second_vm" do |service_two|
+  config.vm.define "vm-node-2" do |service_two|
     service_two.vm.network :private_network, ip: "192.168.56.1"
+  end
+  config.vm.define "vm-node-3" do |service_two|
+    service_two.vm.network :private_network, ip: "192.168.56.2"
   end
     # Enable provisioning with a shell script. Additional provisioners such as
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
